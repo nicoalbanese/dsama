@@ -38,7 +38,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    "https://api.airtable.com/v0/appR5TwS5oZ5ZUr33/Questions?filterByFormula={Status}='Published'",
+    "https://api.airtable.com/v0/appR5TwS5oZ5ZUr33/Questions?filterByFormula={Status}='Published'&sort%5B0%5D%5Bfield%5D=Date+Added&sort%5B0%5D%5Bdirection%5D=desc",
     {
       method: "GET",
       headers: {
@@ -47,11 +47,10 @@ export async function getStaticProps() {
     }
   );
 
-  console.log(res);
   const data = await res.json();
 
   const formattedData = data.records.map((question) => {
-    console.log(question);
+    // console.log(question);
     return {
       question: question.fields["Question"],
       responded_by: question.fields["responded_by_formula"],
