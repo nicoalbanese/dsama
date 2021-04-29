@@ -38,7 +38,7 @@ const Question = ({ question }) => {
       <ResponseContainer>
         <p>{question.response}</p>
         <Responder>
-          <Link href={question.responded_by_twitter_url}>
+          <Link href={question.responded_by_twitter_url} >
           <a>{question.responded_by}</a>
           </Link>
           <Image src={question.responded_by_photo_url} height={50} width={50} />
