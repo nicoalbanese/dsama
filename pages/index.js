@@ -64,6 +64,6 @@ export async function getStaticProps() {
 
   return {
     props: { data: formattedData },
-    revalidate: 1000,
+    revalidate: 1,
   };
 }
