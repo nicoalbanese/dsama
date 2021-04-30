@@ -25,10 +25,10 @@ export default function Home({ data }) {
   return (
     <Container>
       <InnerContainer>
-        <Header>
+        {/* <Header>
           <Title>#DSAMA</Title>
           <h3>Ask anything to the ds investor group..</h3>
-        </Header>
+        </Header> */}
         {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
         <QuestionList questions={data} />
       </InnerContainer>
